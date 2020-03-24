@@ -1,0 +1,4 @@
+https://github.com/PHPMailer/PHPMailer
+
+Mejor manera:
+http://swiftmailer.org/docs/introduction.html

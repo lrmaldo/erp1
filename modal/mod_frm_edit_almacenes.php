@@ -1,0 +1,44 @@
+	<?php
+		if (isset($con))
+		{
+	?>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Editar Almacen</h4>
+		  </div>
+		  <div class="modal-body">
+			<form class="form-horizontal" method="post" id="editar_almacen" name="editar_almacen" >
+			<div id="resultados_ajax2"></div>
+			  
+			  <div class="form-group">
+				<label for="mod_nombre" class="col-sm-3 control-label">Nombre:</label>
+				<div class="col-sm-8">
+				  <input type="text" class="form-control" id="mod_nombre" name="mod_nombre" placeholder="Nombre del Almacen" pattern="(?=.*[A-Z]).{3,30}" title="Sólo mayusculas,3 caracteres mínimo 30 máximo" required>
+					<input type="hidden" name="mod_id" id="mod_id">
+				</div>
+			  </div>
+				
+			<div class="form-check">
+				<label class="col-sm-3 form-check-label"> Activado:</label>
+			  	<div class="col-sm-8">
+					<input type="checkbox" class="form-check-input" name="mod_activate" id="mod_activate" >
+				</div>
+			</div>
+			
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			<button type="submit" class="btn btn-primary" id="actualizar_datos">Actualizar datos</button>
+		  </div>
+		  </form>
+		</div>
+	  </div>
+	</div>
+	
+	<?php
+		}
+	?>

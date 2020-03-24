@@ -1,0 +1,5 @@
+elito@hotmail.com;2870000000;Elito Mojica Pereda;2008-07-08
+rafael@hotmail.com;2871112222;Rafael Nuñez;2017-10-02
+elito@hotmail.com;2870000000;Elito;2017-10-02
+rafa@hotmail.com;2870000000;Rafa;2017-10-11
+papayo@hotmail.com;2870000000;Elito;2017-10-02

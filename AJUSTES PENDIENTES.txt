@@ -1,0 +1,40 @@
+--------------------------------------------------------------
+NO URGENTES
+
+1) Pantalla de Bienvenida con solo los menus de inicio
+2) En los grid poner la opcion de mostrar todos los registros sin paginacion
+-------------------------------------------------------------------------------------------
+
+URGENTE 
+
+1) checar el correcto funcionamiento de los menus de los moviles (Ya realizado)
+
+-------------------------------------------------------------------------------------------
+
+EN VIGENCIA
+
+1)  Se esta viendo lo del envio de correos y hay que agrandar en clientes el campo mail para que quepan los mail de los adjuntos CC Actual: email_cliente 	varchar(64)
+2 ) Tambien en facturas agrandar el campo email_cliente_foraneo char(64) 	utf8_general_ci (Ya checado )
+
+------------------------------------------------------------------------------------------- 12 OCT 2017
+
+INTEGRAR LA NOTA DE VENTA AL ERP
+	
+	DIFERENCIAS EN EL MEMBRETE*
+		
+		(A) EN EL ERP CREAR INTEGRAR EN EL ENCABEZADO: DOMICILIO, CIUDAD Y RFC Y ESTOS SE MANEJARA LA MISMA MECANICA DE CLIENTES REGISTRADOS O FORANEOS
+		(B) EN EL ERP CREAR INTEGRAR EN EL DETALLE: UNIDAD DE MEDIDA, PRECIO TOTAL CAMBIAR A IMPORTE
+		(C) EN EL ERP CREAR INTEGRAR EN EL PIE DE PAGINA CANTIDAD CON LETRA
+		(D) LA LEYENDA FINAL CUANDO SEA VENTA QUE SE OMITA EN LA GENERACION DEL PDF
+		
+ESTRUCTURA DE CAMPOS CLIENTES A TOMAR DE LA TABLA(CLIENTE) CUANDO LLAMADA EN VENTA SEA DE CLIENTE REGISTRADO:
+		direccion_cliente 		varchar(255) 	utf8_general_ci
+		col_cliente			varchar(100)
+		ciudad_cliente 			varchar(50)
+		rfc_cliente 			varchar(13)
+
+ESTRUCTURA DE CAMPOS CLIENTES FORANEOS DE LA TABLA(FACTURAS) A CREAR PARA SER LLENADO EN LA VENTA O COTIZACION
+		direccion_cliente_foraneo	varchar(255) 	utf8_general_ci
+		col_cliente_foraneo		varchar(100)	utf8_general_ci
+		ciudad_cliente_foraneo		varchar(50)	utf8_general_ci
+		rfc_cliente_foraneo		varchar(13)	utf8_general_ci

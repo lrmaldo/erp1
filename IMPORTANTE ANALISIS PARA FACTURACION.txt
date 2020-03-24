@@ -1,0 +1,81 @@
+ARCHIVOS QUE PARTICIPAN EN TODOS ESTOS PROCESOS DE FACTURACION
+==============================================================
+ARCHIVO			RUTA
+-------			-----
+editar_factura.php	/
+facturas.php		/
+nueva_factura.php	/
+agregar_facturacion.php	/ajax
+buscar_facturas.php	/ajax
+editar_factura.php	/ajax
+editar_facturacion.php	/ajax
+productos_factura.php	/ajax
+editar_factura.js	/js
+facturas.js		/js
+nueva_factura.js	/js
+factura_pdf.php		/pdf/documentos
+ver_factura.php		/pdf/documentos
+encabezado_factura.php	/pdf/documentos/res
+factura_html.php	/pdf/documentos/res
+ver_factura_html.php	/pdf/documentos/res
+
+INTERVIENEN LOS INSERT
+----------------------
+factura_pdf.php		/pdf/documentos			*** Insert facturas id
+factura_html.php	/pdf/documentos/res		*** Insert final
+editar_facturacion.php	/ajax
+======================================================================================19May17
+se cambia el nombre de factura_pdf.php a documento_pdf.php 
+======================================================================================30May17
+
+TOMANDO LOS ARCHIVOS DE FACTURACION COMO PLANTILLAS PARA LA CREACION DEL MODULO DE COMPRAS
+
+facturas.php		/		compras
+nueva_factura.php	/
+agregar_facturacion.php	/ajax
+buscar_facturas.php	/ajax
+productos_factura.php	/ajax
+facturas.js		/js
+nueva_factura.js	/js
+factura_pdf.php		/pdf/documentos
+ver_factura.php		/pdf/documentos
+encabezado_factura.php	/pdf/documentos/res
+factura_html.php	/pdf/documentos/res
+ver_factura_html.php	/pdf/documentos/res
+
+
+
+Forma de pago: En una sóla exhibicación, parcialidades o pago inicial y parcialidades.
+
+Catálogo de Método de Pago
+
+
+c_MetodoPago	Descripción
+PUE	Pago en una sola exhibición
+PIP	Pago inicial y parcialidades
+PPD	Pago en parcialidades o diferido
+FormaPago Descripción: Atributo condicional para expresar la clave de la forma de pago de los bienes o servicios amparados por el comprobante. Si no se conoce la forma de pago este atributo se debe omitir.
+
+Catálogo de formas de pago
+
+c_FormaPago	Descripción
+01	Efectivo
+02	Cheque nominativo
+03	Transferencia electrónica de fondos
+04	Tarjeta de crédito
+05	Monedero electrónico
+06	Dinero electrónico
+08	Vales de despensa
+12	Dación en pago
+13	Pago por subrogación
+14	Pago por consignación
+15	Condonación
+17	Compensación
+23	Novación
+24	Confusión
+25	Remisión de deuda
+26	Prescripción o caducidad
+27	A satisfacción del acreedor
+28	Tarjeta de débito
+29	Tarjeta de servicios
+99	Por definir

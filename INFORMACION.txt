@@ -1,0 +1,39 @@
+--------------------------------------------------------------
+Configuracion para .htaccess
+--------------------------------------------------------------
+
+Options -Indexes
+
+<Files .htaccess>
+	Order allow,deny
+	Deny from all
+</Files>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^speedtest.net$ [OR]
+  RewriteCond %{HTTP_HOST} ^www.speedtest.net$
+  RewriteCond %{REQUEST_URI} !^/mini/
+  RewriteRule (.*) /mini/$1 [L]  
+</IfModule>
+
+<IfModule mod_php5.c>
+    #Session timeout
+	php_value session.cookie_lifetime 18000
+	php_value session.gc_maxlifetime 18000
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</IfModule>
+
+
+#Clear cache
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^erpsattlink\/(.*)\/ui\-([0-9]+)\/(.*) erpsattlink/$1/ui/$3 [L]
+</IfModule>
+
